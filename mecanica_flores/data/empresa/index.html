@@ -1,0 +1,285 @@
+<div class="main-content">	
+	<div class="main-content-inner">
+	    <div class="breadcrumbs" id="breadcrumbs">
+			<script type="text/javascript">
+				try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+			</script>
+
+			<ul class="breadcrumb">
+				<li>
+					<i class="ace-icon fa fa-home home-icon"></i>
+					<a href="#/">Inicio</a>
+				</li>
+
+				<li class="active">Empresa</li>
+			</ul>
+		</div>
+
+		<div class="page-content">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<i class="fa fa-edit"></i> Registro Empresa
+						</div>
+
+					    <div class="panel-body">
+					    	<form class="form-horizontal" enctype="multipart/form-data" name="form_empresa" id="form_empresa" >
+						    	<div class="col-md-3">
+							    	<div class="widget-box">
+										<div class="widget-body">
+											<div class="widget-main">
+												<img id="logo" name="logo" class="img-responsive" alt="Logo Empresa" style="width: 100%; height: 100%"  />
+											</div>
+										</div>
+									</div>	
+						    	</div>
+
+						    	<div class="col-md-9">
+									<ul class="nav nav-tabs padding-12 tab-color-blue background-blue" id="tabEmpresa">
+										<li class="active">
+											<a data-toggle="tab" href="#detalles">Detalles</a>
+										</li>
+										<li>
+											<a data-toggle="tab" href="#adicionales">Adicionales</a>
+										</li>
+									</ul>
+										
+									<div class="tab-content">
+										<div id="detalles" class="tab-pane in active">
+											<div class="form-group">
+												<label for="ruc" class="control-label col-sm-3 bolder">RUC Empresa::</label>
+												<div class="col-sm-7">
+													<div class="clearfix">
+														<input type="text" name="ruc" id="ruc" class="form-control" placeholder="Consultar..." />
+														<input type="hidden" name="id" id="id" class="form-control" />
+													</div>
+												</div>
+												<button class="btn btn-primary btn-sm" id="btn_verificar" type="button" onclick="angular.element(this).scope().cargadatos('estado')"><i class="ace-icon fa fa-search"></i></button>
+											</div>
+
+											<div class="form-group">
+												<label for="razon_social" class="control-label col-sm-3 bolder">Razón Social:</label>
+												<div class="col-sm-7">
+													<div class="clearfix">
+														<input type="text" name="razon_social" id="razon_social" class="form-control" placeholder="Razón Social" onkeyup="this.value = this.value.toUpperCase();" />
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label for="nombre_comercial" class="control-label col-sm-3 bolder">Nombre Comercial:</label>
+												<div class="col-sm-7">
+													<div class="clearfix">
+														<input type="text" name="nombre_comercial" id="nombre_comercial" placeholder="Nombre Comercial" class="form-control" onkeyup="this.value = this.value.toUpperCase();" />
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label for="actividad_economica" class="control-label col-sm-3 bolder">Actividad Económica:</label>
+												<div class="col-sm-7">
+													<div class="clearfix">
+														<input type="text" name="actividad_economica" id="actividad_economica" class="form-control" placeholder="Actividad Económica" />
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label for="representante_legal" class="control-label col-sm-3 bolder">Representante Legal:</label>
+												<div class="col-sm-7">
+													<div class="clearfix">
+														<input type="text" name="representante_legal" id="representante_legal" class="form-control" placeholder="Representante Legal" />
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label for="identificacion_representante" class="control-label col-sm-3 bolder">Identificación Representante:</label>
+												<div class="col-sm-7">
+													<div class="clearfix">
+														<input type="text" name="identificacion_representante" id="identificacion_representante" placeholder="Identificación Representante" class="form-control" />
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label for="telefono1" class="control-label col-sm-3 bolder">Teléfono:</label>
+												<div class="col-sm-7">
+													<div class="clearfix">
+														<span class="block input-icon">
+															<input type="text" name="telefono1" id="telefono1" class="form-control" placeholder="Teléfono" />
+															<i class="ace-icon fa fa-phone"></i>
+											            </span>
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label for="telefono2" class="control-label col-sm-3 bolder">Celular:</label>
+												<div class="col-sm-7">
+													<div class="clearfix">
+														<span class="block input-icon">
+															<input type="text" name="telefono2" id="telefono2" class="form-control" placeholder="Celular" />
+															<i class="ace-icon fa fa-mobile"></i>
+											            </span>
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label for="ciudad" class="control-label col-sm-3 bolder">Ciudad:</label>
+												<div class="col-sm-7">
+													<div class="clearfix">
+														<input type="text" name="ciudad" id="ciudad" class="form-control" placeholder="Ciudad" onkeyup="this.value = this.value.toUpperCase();" />
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label for="direccion_matriz" class="control-label col-sm-3 bolder">Dirección Matriz:</label>
+												<div class="col-sm-7">
+													<div class="clearfix">
+														<input type="text" name="direccion_matriz" id="direccion_matriz" class="form-control" placeholder="Dirección Matriz" />
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label for="direccion_establecimiento" class="control-label col-sm-3 bolder">Dirección Establecimiento:</label>
+												<div class="col-sm-7">
+													<div class="clearfix">
+														<input type="text" name="direccion_establecimiento" id="direccion_establecimiento" class="form-control" placeholder="Dirección Establecimiento" />
+													</div>
+												</div>
+											</div>							
+										</div>
+
+										<div id="adicionales" class="tab-pane">
+											<div class="form-group">
+												<label for="establecimiento" class="control-label col-sm-3 bolder">Establecimiento:</label>
+												<div class="col-sm-7">
+													<div class="clearfix">
+														<input type="text" name="establecimiento" id="establecimiento" class="form-control" placeholder="Establecimiento" />
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label for="punto_emision" class="control-label col-sm-3 bolder">Punto Emisión:</label>
+												<div class="col-sm-7">
+													<div class="clearfix">
+														<input type="text" name="punto_emision" id="punto_emision" maxlength="3" class="form-control" placeholder="Punto Emisión" />
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label for="obligacion" class="control-label col-sm-3 bolder">Obligado llevar Contabilidad:</label>
+												<div class="col-sm-7">
+													<div class="clearfix">
+														<label>
+															<input type="checkbox" name="obligacion" id="obligacion" class="ace ace-switch ace-switch-5" checked>
+															<span class="lbl"></span>
+														</label>
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label for="contribuyente" class=" control-label col-sm-3 bolder">Nro. Contribuyente:</label>
+											    <div class="col-sm-7">
+											 	   	<input type="text" name="contribuyente" id="contribuyente" class="form-control" placeholder="Nro. Contribuyente" />
+											    </div>											    
+											</div>
+
+											<div class="form-group">
+												<label for="autorizacion" class="control-label col-sm-3 bolder">Nro. Autorizacíón:</label>
+											    <div class="col-sm-7">
+											 	   	<input type="text" name="autorizacion" id="autorizacion" class="form-control" placeholder="Nro. Autorizacíón" />
+											    </div>											    
+											</div>
+
+											<div class="form-group">
+												<label for="file_1" class="control-label col-sm-3 bolder">Token:</label>
+											    <div class="col-sm-7">
+											 	   	<input type="file" class="form-control" id="file_1" name="file_1" fileinput="file" /"> 
+											    </div>											    
+											</div>
+
+											<div class="form-group">
+												<label for="clave_token" class="control-label col-sm-3 bolder">Clave Token:</label>
+											    <div class="col-sm-7">
+											 	   	<input type="password" name="clave_token" id="clave_token" class="form-control" placeholder="Clave Token" />
+											    </div>											    
+											</div>
+
+											<div class="form-group">
+												<label for="file_2" class="control-label col-sm-3 bolder">Logo:</label>
+											    <div class="col-sm-7">
+											 	   	<input type="file" class="form-control" id="file_2" name="file_2" fileinput="file" onchange='Test.UpdatePreview(this)' accept="image/*" />			    
+											    </div>
+											</div>
+
+											<div class="form-group">
+												<label for="correo" class="control-label col-sm-3 bolder">Correo:</label>
+												<div class="col-sm-7">
+													<div class="clearfix">
+														<span class="block input-icon">
+															<input type="text" name="correo" id="correo" class="form-control" placeholder="Correo" />
+															<i class="ace-icon fa fa-envelope"></i>
+											            </span>
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label for="sitio_web" class="control-label col-sm-3 bolder">Sitio Web:</label>
+												<div class="col-sm-7">
+													<div class="clearfix">
+														<span class="block input-icon">
+															<input type="text" name="sitio_web" id="sitio_web" class="form-control" placeholder="Sitio Web" />
+															<i class="ace-icon fa fa-globe"></i>
+											            </span>
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label for="slogan" class="control-label col-sm-3 bolder">Slogan:</label>
+												<div class="col-sm-7">
+													<div class="clearfix">
+														<input type="text" name="slogan" id="slogan" class="form-control" placeholder="Slogan" />
+													</div>
+												</div>
+											</div>	
+										</div>
+									</div>
+
+									<div class="clearfix form-actions center">
+										<div class="col-md-12">
+											<button type="button" name="btn_0" id="btn_0" class="btn btn-primary" data-toggle="tooltip" title="Registrar Empresa">
+												<i class="ace-icon fa fa-save bigger-110"></i>
+												Guardar
+											</button>
+
+											<button type="button" name="btn_1" id="btn_1" class="btn btn-primary" data-toggle="tooltip" title="Modificar Empresa">
+												<i class="ace-icon fa fa-pencil-square-o bigger-110"></i>
+												Modificar
+											</button>
+
+											<!--<button type="button" name="btn_3" id="btn_3" class="btn btn-primary" data-toggle="tooltip" title="Nuevo">
+												<i class="ace-icon fa fa-file bigger-110"></i>
+												Nuevo
+											</button>-->
+										</div>
+									</div>
+						    	</div>
+						    </form>	
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	

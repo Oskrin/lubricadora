@@ -1,0 +1,424 @@
+<div class="main-content">	
+	<div class="main-content-inner">
+	    <div class="breadcrumbs" id="breadcrumbs">
+			<script type="text/javascript">
+				try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+			</script>
+
+			<ul class="breadcrumb">
+				<li>
+					<i class="ace-icon fa fa-home home-icon"></i>
+					<a href="#/">Inicio</a>
+				</li>
+
+				<li class="active">Factura Compra</li>
+			</ul>
+		</div>
+
+	    <div class="page-content">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<i class="fa fa-edit"></i> Registro Factura Compra
+						</div>
+
+						<div class="panel-body">	
+							<form class="form-horizontal" name="form_factura" id="form_factura" autocomplete="off">
+								<div class="row">
+									&nbsp; 
+									<div class="col-sm-12">
+										<div class="col-sm-4">
+											<div class="form-group">
+												<label class="control-label col-sm-4 no-padding-right bolder">FECHA.:</label>
+												<div class="col-sm-8">
+													<div class="input-group">
+														<input type="text" name="fecha_emision" id="fecha_emision" class="form-control datepicker" readonly />
+														<span class="input-group-addon">
+															<i class="ace-icon fa fa-calendar"></i>
+														</span>
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label col-sm-4 no-padding-right bolder">RUC/CI.:</label>
+												<div class="col-sm-8">
+													<span class="block input-icon">
+														<input type="text" name="ruc" id="ruc" placeholder="Buscar..." class="form-control" />
+														<i class="ace-icon fa fa fa-search"></i>
+													</span>
+													<input type="hidden" name="id_proveedor" id="id_proveedor" class="form-control" />
+													<input type="hidden" name="id_factura" id="id_factura" class="form-control" />
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label col-sm-4 no-padding-right bolder">DIRECCIÓN.:</label>
+												<div class="col-sm-8">
+													<input type="text" name="direccion" id="direccion" class="form-control" readonly />
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label col-sm-4 no-padding-right bolder">FECHA CANCELACIÓN.:</label>
+												<div class="col-sm-8">
+													<div class="input-group">
+														<input type="text" name="fecha_cancelacion" id="fecha_cancelacion" class="form-control datepicker" readonly />
+														<span class="input-group-addon">
+															<i class="ace-icon fa fa-calendar"></i>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-sm-4">
+											<div class="form-group">
+												<label class="control-label col-sm-4 no-padding-right bolder">HORA.:</label>
+												<div class="col-sm-8">
+									                <div class="input-group">
+									                    <input type="text" name="hora_actual" id="hora_actual" class="form-control" readonly />
+									                    <span class="input-group-addon">
+									                        <i class="glyphicon glyphicon-time"></i>
+									                    </span>
+									                </div>
+									            </div>
+								            </div>
+
+								            <div class="form-group">
+												<label class="control-label col-sm-4 no-padding-right bolder">RAZÓN SOCIAL.:</label>
+												<div class="col-sm-8">
+													<span class="block input-icon">
+														<input type="text" name="razon_social" id="razon_social" class="form-control" placeholder="Buscar..." />
+														<i class="ace-icon fa fa fa-search"></i>
+													</span>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label col-sm-4 no-padding-right bolder">CORREO.:</label>
+												<div class="col-sm-8">
+													<span class="block input-icon">
+														<input type="text" name="correo" id="correo" class="form-control" readonly />
+														<i class="ace-icon fa fa fa-envelope"></i>
+													</span>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label col-sm-4 no-padding-right bolder">FECHA CADUCIDAD.:</label>
+												<div class="col-sm-8">
+													<div class="input-group">
+														<input type="text" name="fecha_caducidad" id="fecha_caducidad" class="form-control datepicker" readonly />
+														<span class="input-group-addon">
+															<i class="ace-icon fa fa-calendar"></i>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-sm-4">
+											<div class="form-group">
+												<label class="control-label col-sm-4 no-padding-right bolder">N° SERIE COMPRA.:</label>
+												<div class="col-sm-8">
+													<input type="text" name="serie" id="serie" class="form-control" />
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label col-sm-4 no-padding-right bolder">TELÉFONO.:</label>
+												<div class="col-sm-8">
+													<span class="block input-icon">
+														<input type="text" name="telefono" id="telefono" class="form-control" readonly />
+														<i class="ace-icon fa fa fa-mobile"></i>
+													</span>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label col-sm-4 no-padding-right bolder">FECHA REGISTRO.:</label>
+												<div class="col-sm-8">
+													<div class="input-group">
+														<input type="text" name="fecha_registro" id="fecha_registro" class="form-control datepicker" readonly />
+														<span class="input-group-addon">
+															<i class="ace-icon fa fa-calendar"></i>
+														</span>
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label col-sm-4 no-padding-right bolder">AUTORIZACIÓN.:</label>
+												<div class="col-sm-8">
+													<input type="text" name="autorizacion" id="autorizacion" class="form-control" placeholder="Autorización" />
+												</div>
+											</div>
+										</div>	
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-12">
+										<h4 class="header smaller lighter blue">DETALLE FACTURA COMPRA</h4>
+										<div class="row">
+											<div class="col-sm-9">
+												<div class="col-sm-2 no-padding-right">
+													<label class="control-label bolder">CÓDIGO BARRAS</label>
+													<span class="block input-icon">
+														<input type="text" name="codigo_barras" id="codigo_barras" class="form-control" placeholder="Buscar......" />
+														<i class="ace-icon fa fa fa-barcode"></i>
+													</span>
+												</div>
+
+												<div class="col-sm-2 no-padding-right">
+													<label class="control-label bolder">CÓDIGO</label>
+													<span class="block input-icon">
+														<input type="text" name="codigo" id="codigo" class="form-control" placeholder="Buscar......" />
+														<i class="ace-icon fa fa fa-search"></i>
+													</span>
+												</div>
+
+												<div class="col-sm-4 no-padding-right">
+													<label class="control-label bolder">DESCRIPCIÓN</label>
+													<span class="block input-icon">
+														<input type="text" name="producto" id="producto" class="form-control" placeholder="Buscar......" onkeyup="this.value = this.value.toUpperCase();" />
+														<i class="ace-icon fa fa fa-search"></i>
+													</span>
+												</div>
+
+												<div class="col-sm-1 no-padding-right">
+													<label class="control-label bolder">CANT.</label>
+													<input type="text" name="cantidad" id="cantidad" class="form-control" />
+												</div>
+
+												<div class="col-sm-1 no-padding-right">
+													<label class="control-label bolder">PRECIO</label>
+													<input type="text" name="precio_costo"  id="precio_costo" class="form-control" />
+													<input type="hidden" id="descuento" name="descuento" class="form-control" />
+													<input type="hidden" name="id_producto" id="id_producto" class="form-control" />
+													<input type="hidden" name="precio_venta" id="precio_venta" class="form-control" />
+					                                <input type="hidden" name="stock" id="stock" class="form-control" />
+					                                <input type="hidden" name="iva_producto" id="iva_producto" class="form-control" />
+					                                <input type="hidden" name="incluye" id="incluye" class="form-control" />
+												</div>
+											</div>	
+										</div>
+										&nbsp; &nbsp;
+										
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="col-sm-9">	
+													<div id="grid_container">
+														<table id="table"></table>
+														<!-- <div id="pager"></div>	 -->
+													</div>	
+												</div>
+
+												<div class="col-sm-3">
+						                            <div class="form-group">
+														<label class="control-label col-md-5 no-padding-right bolder bolder">SUBTOTAL:</label>
+														<div class="col-md-6">
+															<span class="input-icon">
+																<input type="text" name="subtotal" id="subtotal" class="form-control" value="0.000" readonly />
+																<i class="ace-icon fa fa fa-usd orange"></i>
+															</span>
+														</div>
+													</div>
+
+													 <div class="form-group">
+						                                <label class="control-label col-md-5 no-padding-right bolder">TARIFA 12%:</label>
+						                                <div class="col-md-6">
+						                                	<span class="input-icon">
+																<input type="text" name="tarifa" id="tarifa" class="form-control" value="0.000" readonly />
+																<i class="ace-icon fa fa fa-usd orange"></i>
+															</span>                                
+						                                </div> 
+						                            </div>
+
+						                            <div class="form-group">
+						                                <label class="control-label col-md-5 no-padding-right bolder">TARIFA 0%:</label>
+						                                <div class="col-md-6">
+						                                	<span class="input-icon">
+																<input type="text" name="tarifa_0" id="tarifa_0" class="form-control" value="0.000" readonly />
+																<i class="ace-icon fa fa fa-usd orange"></i>
+															</span>                                
+						                                </div> 
+						                            </div>
+
+						                            <div class="form-group">
+						                                <label class="control-label col-md-5 no-padding-right bolder">IVA:</label>
+						                                <div class="col-md-6">
+						                               		<span class="input-icon">
+																<input type="text" name="iva" id="iva" class="form-control" value="0.000" readonly />
+																<i class="ace-icon fa fa fa-usd orange"></i>
+															</span>                               
+						                                </div> 
+						                            </div>
+
+						                            <div class="form-group">
+						                                <label class="control-label col-md-5 no-padding-right bolder">DESCUENTO:</label>
+						                                <div class="col-md-6">
+						                                	<span class="input-icon">
+																<input type="text" name="otros" id="otros" class="form-control" value="0.000" readonly />
+																<i class="ace-icon fa fa fa-usd orange"></i>
+															</span>                               
+						                                </div> 
+						                            </div>
+
+						                            <div class="form-group">
+						                                <label class="control-label col-md-5 no-padding-right bolder">TOTAL:</label>
+						                                <div class="col-md-6">
+						                                	<span class="input-icon">
+																<input type="text" name="total_pagar" id="total_pagar" class="form-control" value="0.00" readonly />
+																<i class="ace-icon fa fa fa-usd orange"></i>
+															</span>                               
+						                                </div> 
+						                            </div>
+												</div>
+											</div>
+
+											<div class="col-sm-12">
+												<div class="col-sm-7">
+													<h4 class="header smaller lighter blue">Formas Pago</h4>
+													<button type="button" name="btn_brir" id="btn_brir" class="btn btn-primary btn-sm"><i class="ace-icon fa fa-plus-circle"></i> Nuevo Pago</button>
+
+													<div id="grid_container2">
+														&nbsp;
+														<table id="table4"></table>
+													</div>
+												</div>
+
+												<div class="col-sm-5">
+													<!--<div class="col-sm-2 no-padding-right">
+														<label class="control-label bolder">N° ITEMS:</label>
+														<input type="text" name="items" id="items" class="form-control" readonly value="0" />
+													</div>
+
+													<div class="col-sm-2 no-padding-right">
+														<label class="control-label bolder">N° PRODUCTOS:</label>
+														<input type="text" name="num" id="num" class="form-control" readonly value="0" /> 
+													</div>-->
+												</div>
+											</div>	
+										</div>
+									</div>	
+								</div>
+
+								<div class="clearfix form-actions center">
+									<div class="col-md-12">
+										<button type="button" name="btn_0" id="btn_0" class="btn btn-primary" data-toggle='tooltip' title='Registrar Factura'>
+											<i class="ace-icon fa fa-save bigger-110"></i>
+											Guardar
+										</button>
+
+										<!--<button type="button" name="btn_1" id="btn_1" class="btn btn-primary" data-toggle='tooltip' title='Modificar Factura'>
+											<i class="ace-icon fa fa-edit bigger-110"></i>
+											Modificar
+										</button>-->
+
+										<button type="button" name="btn_2" id="btn_2" class="btn btn-primary" data-toggle="modal" href="#myModal">
+											<i class="ace-icon fa fa-search bigger-110"></i>
+											Facturas
+										</button>
+
+										<!--<button type="button" name="btn_3" id="btn_3" class="btn btn-primary" data-toggle='tooltip' title='Imprimir Factura'>
+											<i class="ace-icon fa fa-print bigger-110"></i>
+											Imprimir
+										</button>-->
+
+										<button type="button" name="btn_4" id="btn_4" class="btn btn-primary" data-toggle='tooltip' title='Nuevo'>
+											<i class="ace-icon fa fa-file bigger-110"></i>
+											Nuevo
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModal">
+	    <div class="modal-dialog modal-lg">
+		    <div class="modal-content">
+		        <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			        <h4 class="modal-title">BUSCAR FACTURAS COMPRA</h4>
+		        </div>
+
+		        <div class="modal-body">
+		            <table id="table2"></table>
+					<div id="pager2"></div>
+		        </div>
+
+		        <div class="modal-footer">
+		          	<button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle='tooltip' title='Cerra Ventana'>Cerrar</button>
+		        </div>
+		    </div>
+	    </div>
+	</div>
+
+	<div class="modal fade bs-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModalformas" data-backdrop="static" data-keyboard="false">
+	    <div class="modal-dialog modal-md">
+		    <div class="modal-content">
+		        <div class="modal-header">
+		          	<button type="button" class="close" data-dismiss="modal">&times;</button>
+		          	<h4 id="helpModalLabel"> Detalle Formas Pago</h4>
+		        </div>
+		        <div class="modal-body">
+		            <div class="modal-body">
+			        	<form class="form-horizontal" name="form_pagos" id="form_pagos" autocomplete="off">
+			        		<div class="form-group">
+								<label class="control-label col-sm-4 no-padding-right bolder">FORMA PAGO.:</label>
+								<div class="col-sm-7">
+									<select name="select_forma_pago" id="select_forma_pago" class="select2" data-placeholder="Forma Pago...">
+									</select>
+								</div>
+							</div>
+
+				        	<div class="form-group">
+				                <label class="control-label col-md-4 no-padding-right bolder">VALOR:</label>
+				                <div class="col-md-7">
+				                	<span class="block input-icon">
+										<input type="text" name="valor" id="valor" class="form-control" placeholder="0.00" readonly />
+										<i class="ace-icon fa fa fa-usd orange"></i>
+									</span>                               
+				                </div>
+				            </div>
+
+				        	<div class="form-group">
+								<label class="control-label col-sm-4 no-padding-right bolder">TIEMPO.:</label>
+								<div class="col-sm-7">
+									<select name="select_tiempo" id="select_tiempo" class="select2" data-placeholder="Tiempo...">
+										<option value="Ninguno">Ninguno</option>
+										<option value="Días">Días</option>
+										<option value="Semanas">Semanas</option>
+										<option value="Meses">Meses</option>
+										<option value="Años">Años</option>
+									</select>
+								</div>
+							</div>
+
+				        	<div class="form-group">
+				                <label class="control-label col-md-4 no-padding-right bolder">PLAZO:</label>
+				                <div class="col-md-7">
+									<input type="text" name="plazo" id="plazo" class="form-control" />	                              
+				                </div> 
+				            </div>
+				        </form>
+			      	</div>
+		        </div>
+
+		        <div class="modal-footer">
+		        	<button type="button" class="btn btn-primary" id="btn_agregar">Aceptar</button>
+		      	</div>
+		    </div>
+	    </div>
+	</div>
+</div>	
+
+

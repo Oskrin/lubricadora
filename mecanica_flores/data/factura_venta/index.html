@@ -1,0 +1,779 @@
+<div class="main-content">	
+	<div class="main-content-inner">
+	    <div class="breadcrumbs" id="breadcrumbs">
+			<script type="text/javascript">
+				try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+			</script>
+
+			<ul class="breadcrumb">
+				<li>
+					<i class="ace-icon fa fa-home home-icon"></i>
+					<a href="#/">Inicio</a>
+				</li>
+
+				<li class="active">Factura Venta</li>
+			</ul>
+		</div>
+
+	    <div class="page-content">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<i class="fa fa-edit"></i> Registro Factura Venta {{estado}}
+						</div>
+
+						<div class="panel-body">
+							<ul class="nav nav-tabs padding-12 tab-color-blue background-blue" id="tabFacturacion">
+								<li class="active">
+									<a data-toggle="tab" href="#ingresar">Ingresar Factura</a>
+								</li>
+
+								<!--<li>
+									<a data-toggle="tab" href="#comprobantes">Validar Comprobantes</a>
+								</li>-->
+
+								<li>
+									<a data-toggle="tab" href="#emitidas">Facturas Registradas</a>
+								</li>
+							</ul>
+
+							<div class="tab-content">
+								&nbsp;
+								<div id="ingresar" class="tab-pane in active">
+									<form class="form-horizontal" name="form_factura" id="form_factura" autocomplete="off">
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="col-sm-4">
+													<div class="form-group">
+														<label class="control-label col-sm-4 no-padding-right bolder">FECHA.:</label>
+														<div class="col-sm-8">
+															<div class="input-group">
+																<input type="text" name="fecha_emision" id="fecha_emision" class="form-control datepicker" readonly />
+																<span class="input-group-addon">
+																	<i class="ace-icon fa fa-calendar"></i>
+																</span>
+															</div>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="control-label col-sm-4 no-padding-right bolder">RUC/CI.:</label>
+														<div class="col-sm-6">
+															<div class="clearfix">
+																<span class="block input-icon">
+																	<input type="text" name="ruc" id="ruc" class="form-control" placeholder="Buscar..." />
+																	<i class="ace-icon fa fa-search"></i>
+																</span>
+																<input type="hidden" name="id_cliente" id="id_cliente" class="form-control" />
+																<input type="hidden" name="id_factura" id="id_factura" class="form-control" />
+																<input type="hidden" name="id_proforma" id="id_proforma" class="form-control" />
+															</div>
+														</div>
+														<button type="button" name="btn_verificar" id="btn_verificar" class="btn btn-primary btn-sm" onclick="angular.element(this).scope().cargadatos('estado')" data-toggle='tooltip' title="Nuevo Cliente"><i class="fa fa-plus-square"></i></button>
+													</div>
+
+													<div class="form-group">
+														<label class="control-label col-sm-4 no-padding-right bolder">DIRECCIÓN.:</label>
+														<div class="col-sm-8">
+															<input type="text" name="direccion" id="direccion" class="form-control" readonly />
+														</div>
+													</div>
+												</div>
+
+												<div class="col-sm-4">
+													<div class="form-group">
+														<label class="control-label col-sm-4 no-padding-right bolder">HORA.:</label>
+														<div class="col-sm-8">
+											                <div class="input-group">
+											                    <input type="text" name="hora_actual" id="hora_actual" class="form-control" readonly />
+											                    <span class="input-group-addon">
+											                        <i class="glyphicon glyphicon-time"></i>
+											                    </span>
+											                </div>
+											            </div>
+										            </div>
+
+										            <div class="form-group">
+														<label class="control-label col-sm-4 no-padding-right bolder">RAZÓN SOCIAL.:</label>
+														<div class="col-sm-8">
+															<span class="block input-icon">
+																<input type="text" name="razon_social" id="razon_social" class="form-control" onkeyup="this.value = this.value.toUpperCase();" placeholder="Buscar..." />
+																<i class="ace-icon fa fa-search"></i>
+															</span>
+															<input type="hidden" name="nombre_comercial" id="nombre_comercial" class="form-control" onkeyup="this.value = this.value.toUpperCase();" placeholder="Buscar..." />
+																
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="control-label col-sm-4 no-padding-right bolder">CORREO.:</label>
+														<div class="col-sm-8">
+															<span class="block input-icon">
+																<input type="text" name="correo" id="correo" class="form-control" readonly />
+																<i class="ace-icon fa fa fa-envelope"></i>
+															</span>
+														</div>
+													</div>
+												</div>
+
+												<div class="col-sm-4">
+													<div class="form-group">
+														<label class="control-label col-sm-5 no-padding-right bolder">N° SERIE {{establecimiento}} - {{emision}} -</label>
+														<div class="col-sm-7">
+															<input type="text" name="serie" id="serie" class="form-control" readonly />
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="control-label col-sm-4 no-padding-right bolder">TELÉFONO.:</label>
+														<div class="col-sm-8">
+															<span class="block input-icon">
+																<input type="text" name="telefono" id="telefono" class="form-control" readonly />
+																<i class="ace-icon fa fa-mobile"></i>
+															</span>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="control-label col-sm-4 no-padding-right bolder">TIPO PRECIO:</label>
+														<div class="col-sm-8">
+															<select name="select_tipo_precio" id="select_tipo_precio" class="select2" data-placeholder="Tipo Precio...">
+																<option value="MINORISTA" selected>MINORISTA</option>
+																<option value="MAYORISTA">MAYORISTA</option>
+															</select>
+														</div>
+													</div>
+												</div>	
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-sm-12">
+												<h4 class="header smaller lighter blue">DETALLE FACTURA VENTA</h4>
+												<div class="row">
+													<div class="col-sm-9">
+														<div class="col-sm-2 no-padding-right">
+															<label class="control-label bolder">CÓDIGO BARRAS</label>
+															<span class="block input-icon">
+																<input type="text" name="codigo_barras" id="codigo_barras" class="form-control"  placeholder="Buscar......" />
+																<i class="ace-icon fa fa fa-barcode"></i>
+															</span>
+														</div>
+
+														<div class="col-sm-2 no-padding-right">
+															<label class="control-label bolder">CÓDIGO</label>
+															<span class="block input-icon">
+																<input type="text" name="codigo" id="codigo" class="form-control" placeholder="Buscar......" />
+																<i class="ace-icon fa fa fa-search"></i>
+															</span>
+														</div>
+
+														<div class="col-sm-4 no-padding-right">
+															<label class="control-label bolder">DESCRIPCIÓN</label>
+															<span class="block input-icon">	
+																<input type="text" name="producto" id="producto" class="form-control" placeholder="Buscar......" onkeyup="this.value = this.value.toUpperCase();" />
+																<i class="ace-icon fa fa fa-search"></i>
+															</span>
+														</div>
+
+														<div class="col-sm-1 no-padding-right">
+															<label class="control-label bolder">CANT.</label>
+															<input type="text" name="cantidad" id="cantidad" class="form-control" />
+														</div>
+
+														<div class="col-sm-1 no-padding-right">
+															<label class="control-label bolder">PRECIO</label>
+															<input type="text" name="precio_venta" id="precio_venta" class="form-control" readonly/>
+														</div>
+
+														<div class="col-sm-1 no-padding-right" style="display: none">
+															<label class="control-label bolder">DESC.</label>
+															<input type="text" name="descuento" id="descuento" class="form-control" readonly />
+														</div>
+
+														<div class="col-sm-1 no-padding-right">
+															<label class="control-label bolder">STOCK</label>
+															<input type="text" name="stock" id="stock" class="form-control" readonly />
+															
+															<input type="hidden" name="id_producto"  id="id_producto" class="form-control" />
+															<input type="hidden" name="id_adicional"  id="id_adicional" class="form-control" />
+															<input type="hidden" name="precio_costo" id="precio_costo" class="form-control" />
+							                                <input type="hidden" name="iva_producto" id="iva_producto" class="form-control" />
+							                                <input type="hidden" name="incluye" id="incluye" class="form-control" />
+							                                <input type="hidden" name="inventariable" id="inventariable" class="form-control" />
+							                                <input type="hidden" name="tipo" id="tipo" class="form-control" />
+														</div>
+
+														<div class="col-sm-1 no-padding-right">
+															<label class="control-label bolder">AGREGAR</label>
+															<button type="button" name="btn_modal" id="btn_modal" class="btn btn-primary btn-sm"  data-toggle='tooltip' title="Buscar..."><i class="fa fa-search-plus"></i></button>
+														</div>
+													</div>	
+												</div>
+												&nbsp; &nbsp;
+												
+												<div class="row">
+													<div class="col-sm-12">
+														<div class="col-sm-9">	
+															<div id="grid_container">
+																<table id="table"></table>
+																<!-- <div id="pager"></div>	 -->
+															</div>	
+														</div>
+
+														<div class="col-sm-3">
+								                            <div class="form-group">
+																<label class="control-label col-md-5 no-padding-right bolder">SUBTOTAL:</label>
+																<div class="col-md-6">
+																	<span class="input-icon">
+																		<input type="text" name="subtotal" id="subtotal" class="form-control" value="0.000" readonly />
+																		<i class="ace-icon fa fa fa-usd orange"></i>
+																	</span>
+																</div>
+															</div>
+
+															 <div class="form-group">
+								                                <label class="control-label col-md-5 no-padding-right bolder">TARIFA 12%:</label>
+								                                <div class="col-md-6">
+								                                	<span class="input-icon">
+																		<input type="text" name="tarifa" id="tarifa" class="form-control" value="0.000" readonly />
+																		<i class="ace-icon fa fa fa-usd orange"></i>
+																	</span>                                
+								                                </div> 
+								                            </div>
+
+								                            <div class="form-group">
+								                                <label class="control-label col-md-5 no-padding-right bolder">TARIFA 0%:</label>
+								                                <div class="col-md-6">
+								                                	<span class="input-icon">
+																		<input type="text" name="tarifa_0" id="tarifa_0" class="form-control" value="0.000" readonly />
+																		<i class="ace-icon fa fa fa-usd orange"></i>
+																	</span>                                
+								                                </div> 
+								                            </div>
+
+								                            <div class="form-group">
+								                                <label class="control-label col-md-5 no-padding-right bolder">IVA:</label>
+								                                <div class="col-md-6">
+								                               		<span class="input-icon">
+																		<input type="text" name="iva" id="iva" class="form-control" value="0.000" readonly />
+																		<i class="ace-icon fa fa fa-usd orange"></i>
+																	</span>                               
+								                                </div> 
+								                            </div>
+
+								                            <div class="form-group">
+								                                <label class="control-label col-md-5 no-padding-right bolder">DESCUENTO:</label>
+								                                <div class="col-md-6">
+								                                	<span class="input-icon">
+																		<input type="text" name="otros" id="otros" class="form-control" value="0.000" readonly />
+																		<i class="ace-icon fa fa fa-usd orange"></i>
+																	</span>                               
+								                                </div> 
+								                            </div>
+
+								                            <div class="form-group">
+								                                <label class="control-label col-md-5 no-padding-right bolder">TOTAL:</label>
+								                                <div class="col-md-6">
+								                                	<span class="input-icon">
+																		<input type="text" name="total_pagar" id="total_pagar" class="form-control" value="0.00" readonly />
+																		<i class="ace-icon fa fa fa-usd orange"></i>
+																	</span>                               
+								                                </div> 
+								                            </div>
+														</div>
+													</div>
+
+													<div class="col-sm-12">
+														<div class="col-sm-7">
+															<h4 class="header smaller lighter blue">Formas Pago</h4>
+															<button type="button" name="btn_brir" id="btn_brir" class="btn btn-primary btn-sm"><i class="ace-icon fa fa-plus-circle"></i> Nuevo Pago</button>
+
+															<div id="grid_container2">
+																&nbsp;
+																<table id="table4"></table>
+															</div>
+														</div>
+
+														<div class="col-sm-5">
+															<!--<div class="col-sm-2 no-padding-right">
+																<label class="control-label bolder">N° ITEMS:</label>
+																<input type="text" name="items" id="items" class="form-control" readonly value="0" />
+															</div>
+
+															<div class="col-sm-2 no-padding-right">
+																<label class="control-label bolder">N° PRODUCTOS:</label>
+																<input type="text" name="num" id="num" class="form-control" readonly value="0" /> 
+															</div>-->
+														</div>
+													</div>	
+												</div>
+											</div>	
+										</div>	
+
+										<div class="clearfix form-actions center">
+											<div class="col-md-12">
+												<button type="button" name="btn_0" id="btn_0" class="btn btn-primary" data-toggle='tooltip' title="Facturar">
+													<i class="ace-icon fa fa-clipboard bigger-110"></i>
+													Facturar
+												</button>
+
+												<!--<button type="button" name="btn_1" id="btn_1" class="btn btn-primary" data-toggle='tooltip' title='Modificar Factura'>
+													<i class="ace-icon fa fa-edit bigger-110"></i>
+													Modificar
+												</button>-->
+
+												<button type="button" class="btn btn-primary" data-toggle="modal" href="#myModal">
+													<i class="ace-icon fa fa-search bigger-110"></i>
+													Facturas Venta
+												</button>
+
+												<!--<button type="button" class="btn btn-primary" data-toggle="modal" href="#myModal2">
+													<i class="ace-icon fa fa-search bigger-110"></i>
+													Proformas
+												</button>-->
+
+												<!--<button type="button" name="btn_2" id="btn_2" class="btn btn-primary" data-toggle='tooltip' title='Anular Factura'>
+													<i class="ace-icon fa fa-close bigger-110"></i>
+													Anular
+												</button>
+
+												<button type="button" name="btn_3" id="btn_3" class="btn btn-primary" data-toggle='tooltip' title='Imprimir Factura'>
+													<i class="ace-icon fa fa-print bigger-110"></i>
+													Imprimir
+												</button>-->
+
+												<button type="button" name="btn_4" id="btn_4" class="btn btn-primary" data-toggle='tooltip' title='Nuevo'>
+													<i class="ace-icon fa fa-file bigger-110"></i>
+													Nuevo
+												</button>
+											</div>
+										</div>
+
+										<div class="modal fade" id="myModalCobrar" role="dialog">
+										    <div class="modal-dialog modal-sm">
+											    <div class="modal-content">
+											        <div class="modal-header">
+											          	<button type="button" class="close" data-dismiss="modal">&times;</button>
+											          	<h4 id="helpModalLabel"><i class="ace-icon fa fa-money green home-icon"></i> Cobrar</h4>
+											        </div>
+											        <div class="modal-body">
+											        	<div class="form-group">
+											                <label class="control-label col-md-4 no-padding-right bolder">TOTAL:</label>
+											                <div class="col-md-7">
+											                	<span class="input-icon">
+																	<input type="text" name="total" id="total" class="form-control" style="color: orange; font-size: 20px" value="0.00" readonly />
+																	<i class="ace-icon fa fa fa-usd orange"></i>
+																</span>                               
+											                </div> 
+											            </div>
+
+											        	<div class="form-group">
+											                <label class="control-label col-md-4 no-padding-right bolder">EFECTIVO:</label>
+											                <div class="col-md-7">
+											                	<span class="input-icon">
+																	<input type="text" name="efectivo" id="efectivo" class="form-control" style="color: orange; font-size: 20px" value="" placeholder="0.00" />
+																	<i class="ace-icon fa fa fa-usd orange"></i>
+																</span>                               
+											                </div> 
+											            </div>
+
+											        	<div class="form-group">
+											                <label class="control-label col-md-4 no-padding-right bolder">CAMBIO:</label>
+											                <div class="col-md-7">
+											                	<span class="input-icon">
+																	<input type="text" name="cambio" id="cambio" class="form-control" style="color: orange; font-size: 20px" value="0.00" readonly />
+																	<i class="ace-icon fa fa fa-usd orange"></i>
+																</span>                               
+											                </div> 
+											            </div>
+											      	</div>
+											        <div class="modal-footer">
+											        	<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+											        	<button type="button" class="btn btn-primary" id="enviar">Enviar!</button>
+											      	</div>
+											    </div>
+										    </div>
+										</div>
+									</form>	
+								</div>
+
+								<div id="comprobantes" class="tab-pane">
+									<form class="form-horizontal" name="form_comprobantes" id="form_comprobantes" autocomplete="off">
+										<div class="row">
+											<div class="col-sm-12">
+				                            	<div class="col-md-3">
+					                                <div class="form-group">                                     
+					                                    <select id="select_estado" name="select_estado" tabindex="1" class="select2" data-placeholder="Estado Factura Venta"> 
+					                                        <option value="0" selected="">TODOS</option>
+					                                        <option value="1">AUTORIZADO</option>
+					                                        <option value="2">ERROR AL GENERAR DOCUMENTOS</option>
+					                                        <option value="3">AUTORIZADO CORREO NO ENVIADO</option>
+					                                        <option value="7">RECHAZADO NO AUTORIZADO</option>
+					                                        <option value="8">SIN FIRMAR ERROR EN EL WEB SERVICE</option>
+					                                        <option value="9">SIN FIRMAR SOLO GENERADO</option>
+					                                    </select>                       
+					                                </div>  
+				                            	</div>
+
+				                            	<div class="col-sm-2">
+					                                <div class="form-group">                
+					                                    <div class="col-xs-12 col-sm-12">	     
+				                                            <div class="input-group col-xs-12 col-md-12">
+				                                                 <button type="button" id="btn_buscar" class="btn btn-sm btn-primary col-sm-12">
+				                                                   Buscar Comprobantes
+				                                                    <i class="ace-icon fa fa-search icon-on-right bigger-110"></i>
+				                                                </button>     
+				                                            </div>	                                        
+					                                    </div>
+					                                </div>
+					                            </div>
+					                        </div>
+
+											<div class="col-sm-12">
+												<h3 class="header smaller lighter blue"></h3>
+												<table id="table3"></table>
+												<div id="pager3"></div>										
+											</div>	
+										</div>
+									</form>
+								</div>
+
+								<div id="emitidas" class="tab-pane">
+									<form class="form-horizontal" name="form_emitidas" id="form_emitidas" autocomplete="off">
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="col-sm-4">
+													<div class="form-group">
+														<label class="control-label col-sm-4 no-padding-right bolder">FECHA INICIO.:</label>
+														<div class="col-sm-8">
+															<div class="input-group">
+																<input type="text" name="fecha_inicio" id="fecha_inicio" class="form-control datepicker" readonly />
+																<span class="input-group-addon">
+																	<i class="ace-icon fa fa-calendar"></i>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="col-sm-4">
+													<div class="form-group">
+														<label class="control-label col-sm-4 no-padding-right bolder">FECHA FIN.:</label>
+														<div class="col-sm-8">
+											                <div class="input-group">
+																<input type="text" name="fecha_fin" id="fecha_fin" class="form-control datepicker" readonly />
+																<span class="input-group-addon">
+																	<i class="ace-icon fa fa-calendar"></i>
+																</span>
+															</div>
+											            </div>
+										            </div>
+												</div>
+
+												<div class="col-sm-4">
+													<div class="form-group">
+														<button type="button" name="btn_filtrar" id="btn_filtrar" class="btn btn-primary btn-sm" style="left: 35px"><i class="ace-icon fa fa-search"> FILTRAR</i></button>
+													</div>
+												</div>	
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="col-sm-12">
+													<h3 class="header smaller lighter blue"></h3>								
+													<div class="clearfix">
+														<div class="pull-right tableTools-container"></div>
+													</div>
+													<div class="table-header">
+														Resultados para "Ventas"
+													</div>
+
+													<div>
+														<table id="dynamic-table" class="table table-striped table-bordered table-hover">
+															<thead>
+																<tr>
+																	<th>N°-</th>
+																	<th>VENDEDOR</th>
+																	<th>CLIENTE</th>
+																	<th>FATURA N°-</th>
+																	<th>TOTAL</th>
+																	<th>FECHA</th>
+																	<th></th>
+																</tr>
+															</thead>
+															<tbody>
+																
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>		
+										</div>
+									</form>	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModal">
+	    <div class="modal-dialog modal-lg">
+		    <div class="modal-content">
+		        <div class="modal-header">
+		          	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		          	<h4 class="modal-title">BUSCAR FACTURAS VENTA</h4>
+		        </div>
+
+		        <div class="modal-body">
+		            <table id="table1"></table>
+					<div id="pager1"></div>
+		        </div>
+
+		        <div class="modal-footer">
+		          	<button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle='tooltip' title='Cerrar Ventana'>Cerrar</button>
+		        </div>
+		    </div>
+	    </div>
+	</div>
+
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModal2">
+	    <div class="modal-dialog modal-lg">
+		    <div class="modal-content">
+		        <div class="modal-header">
+		          	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		          	<h4 class="modal-title">BUSCAR PROFORMAS</h4>
+		        </div>
+
+		        <div class="modal-body">
+		            <table id="table2"></table>
+					<div id="pager2"></div>
+		        </div>
+
+		        <div class="modal-footer">
+		          	<button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle='tooltip' title='Cerrar Ventana'>Cerrar</button>
+		        </div>
+		    </div>
+	    </div>
+	</div>
+
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModal3">
+	    <div class="modal-dialog modal-lg">
+		    <div class="modal-content">
+		        <div class="modal-header">
+		          	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		          	<h4 class="modal-title">BUSCAR PRODUCTOS</h4>
+		        </div>
+
+		        <div class="modal-body">
+		        	<form class="form-inline">
+			            <div class="form-group mb-3">
+			                <label>Buscar:</label>
+			            </div>
+			            <div class="form-group mx-sm-3 mb-2">
+			                <input type="text" class="form-control" id="globalSearchText" name="globalSearchText" placeholder="Filtra tu búsqueda">
+			            </div>
+			        </form>
+
+			        <br />
+					<br />
+        								
+		            <table id="table5"></table>
+					<div id="pager5"></div>
+		        </div>
+
+		        <div class="modal-footer">
+		          	<button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle='tooltip' title='Cerrar Ventana'>Cerrar</button>
+		        </div>
+		    </div>
+	    </div>
+	</div>
+
+	<div class="modal fade bs-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="result" data-backdrop="static" data-keyboard="false">
+	    <div class="modal-dialog modal-md">
+		    <div class="modal-content">
+		        <div class="modal-header">          
+		          	<h4 class="modal-title"><b>Resultados del envío!</b></h4>
+		        </div>
+		        <div class="modal-body">
+		            <div class="row"> 
+		            	<div class="col-md-10"></div>
+		            	<div class="col-md-2"></div>
+				    </div>
+		        </div>
+		        <div class="modal-footer">
+		        	<button type="button" class="btn btn-info" id="pdf" data-toggle="tooltip" title="Aceptar y Generar">Aceptar y Generar</button>
+		        	<button type="button" class="btn btn-info" id="cerrar" data-toggle="tooltip" title="Aceptar">Aceptar</button>
+		        </div>
+		    </div>
+	    </div>
+	</div>
+
+	<div class="modal fade bs-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModalformas" data-backdrop="static" data-keyboard="false">
+	    <div class="modal-dialog modal-md">
+		    <div class="modal-content">
+		        <div class="modal-header">
+		          	<button type="button" class="close" data-dismiss="modal">&times;</button>
+		          	<h4 id="helpModalLabel"> Detalle Formas Pago</h4>
+		        </div>
+		        <div class="modal-body">
+		            <div class="modal-body">
+			        	<form class="form-horizontal" name="form_pagos" id="form_pagos" autocomplete="off">
+			        		<div class="form-group">
+								<label class="control-label col-sm-4 no-padding-right bolder">FORMA PAGO.:</label>
+								<div class="col-sm-7">
+									<select name="select_forma_pago" id="select_forma_pago" class="select2" data-placeholder="Forma Pago...">
+									</select>
+								</div>
+							</div>
+
+				        	<div class="form-group">
+				                <label class="control-label col-md-4 no-padding-right bolder">VALOR:</label>
+				                <div class="col-md-7">
+				                	<span class="block input-icon">
+										<input type="text" name="valor" id="valor" class="form-control" placeholder="0.00" />
+										<i class="ace-icon fa fa fa-usd orange"></i>
+									</span>                               
+				                </div>
+				            </div>
+
+				        	<div class="form-group">
+								<label class="control-label col-sm-4 no-padding-right bolder">TIEMPO.:</label>
+								<div class="col-sm-7">
+									<select name="select_tiempo" id="select_tiempo" class="select2" data-placeholder="Tiempo...">
+										<option value="Ninguno">Ninguno</option>
+										<option value="Días">Días</option>
+										<option value="Meses">Meses</option>
+										<option value="Años">Años</option>
+									</select>
+								</div>
+							</div>
+
+				        	<div class="form-group">
+				                <label class="control-label col-md-4 no-padding-right bolder">PLAZO:</label>
+				                <div class="col-md-7">
+									<input type="text" name="plazo" id="plazo" class="form-control" />	                              
+				                </div> 
+				            </div>
+				        </form>
+			      	</div>
+		        </div>
+
+		        <div class="modal-footer">
+		        	<button type="button" class="btn btn-primary" id="btn_agregar">Aceptar</button>
+		      	</div>
+		    </div>
+	    </div>
+	</div>
+
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModalVentas">
+	    <div class="modal-dialog modal-lg">
+		    <div class="modal-content">
+		        <div class="modal-header">
+		          	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		          	<h4 class="modal-title text-center">Factura venta {{est}}-{{emi}}-{{secuencial}}</h4>
+		        </div>
+
+		        <div class="modal-body">
+			        <div class="content-factura">
+			        	<div class="head-left">
+			        		<div class="logo-fatura">
+			        			<img id="logo" name="logo" alt="Logo" style="width: 60%; height: 80%"  />
+			        		</div>	
+
+			        		<p class="titulo full letra-big text-center">
+			                    {{razon_social}}
+			                </p>
+			        	</div>
+
+			        	<div class="head-right">
+			        		<div class="datos-right borde_redondo">
+			        			<p class="titulo half letra-big">RUC:</p>
+			        			<p class="half letra-big">{{ruc}}</p>	
+			        			<p class="full letra-big"><span class="titulo">FACTURA VENTA No.</span>&nbsp   {{est}}-{{emi}}-{{secuencial}}</p>
+			        			<p class="full"><span class="titulo">Matriz:</span>&nbsp {{matriz}}</p>
+			        			<p class="full"><span class="titulo">Sucursal:</span>&nbsp {{sucursal}}</p>
+			        			<p class="full"><span class="titulo">Contribuyente Especial:</span>&nbsp {{contribuyente}}</p>
+			        			<p class="full"><span class="titulo">OBLIGADO A LLEVAR CONTABILIDAD:</span>&nbsp {{obligado}}</p>
+			        		</div>	
+			        	</div>
+
+			        	<div class="datos-cliente">
+			        		<div class="overflow: auto;">
+			        			<p class="full">
+			        				<span class="titulo">Razón Social/Nombres y Apellidos:</span>&nbsp           {{cliente}}
+			        			</p>	
+			        		</div>
+
+			        		<div class="overflow: auto;">
+			        			<p class="titulo six">RUC / C.I.:</p>
+			        			<p class="six">{{identificacion}}</p>
+			        			<p class="titulo six">Fecha Emisión:</p>
+			        			<p class="six">{{fecha}}</p>
+			        			<p class="titulo six">Guía Remisión:</p>
+			        			<p class="six">--</p>	
+			        		</div>	
+			        	</div>
+
+			        	<div class="table tabla-factura">
+			        		<table id="detalle-table" class="table table-striped table-bordered table-hover">
+								    <thead>
+								      <tr>
+								        <th>Código</th>
+								        <th>Descripción</th>
+								        <th>Valor Unitario</th>
+								        <th>Cantidad</th>
+								        <th>Total</th>
+								      </tr>
+								    </thead>
+							    <tbody>
+							      
+							    </tbody>
+							  </table>	
+			        	</div>
+
+			        	<div class="foot-left">&nbsp</div>
+
+			        	<div class="foot-right">
+			        		<div class="table tabla-factura">
+			        			<table class="table table-bordered table-condensed letra-small">
+			        				<tbody>
+			        					<tr>
+			        						<td width="50%"><b>SUBTOTAL</b></td>
+			        						<td align="right">{{subtotal}}</td>
+			        					</tr>
+			        					<tr>
+			        						<td width="50%"><b>IVA</b></td>
+			        						<td align="right">{{iva}}</td>
+			        					</tr>
+			        					<tr>
+			        						<td width="50%"><b>TOTAL</b></td>
+			        						<td align="right">{{total}}</td>
+			        					</tr>	
+			        				</tbody>
+			        			</table>	
+			        		</div>	
+			        	</div>	
+			        </div>
+		        </div>
+
+		        <div class="modal-footer">
+		          	<button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle='tooltip' title='Cerrar Ventana'>Cerrar</button>
+		          	<!--<button data-loading-text="Procesando..." type="button" class="btn btn-primary" data-toggle='tooltip' title='Imprimir'><span class="fa fa-print"></span> Imprimir</button>-->
+		        </div>
+		    </div>
+	    </div>
+	</div>
+</div>
+
+
+
+
+	
+
+

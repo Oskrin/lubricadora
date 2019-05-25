@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autorizacion>
+<estado>NO AUTORIZADO</estado>
+<numeroAutorizacion/>
+<fechaAutorizacion>2018-07-15T13:24:46-05:00</fechaAutorizacion>
+<comprobante><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+<infoTributaria>
+<ambiente>1</ambiente>
+<tipoEmision>1</tipoEmision>
+<razonSocial>MONTESDEOCA LOPEZ CARLA ESTEFANIA</razonSocial>
+<nombreComercial>CONCEPTUAL BUSINESS GROUP / CORPORACION EFE - EME</nombreComercial>
+<ruc>1003129903001</ruc>
+<claveAcceso>1507201801100312990300110010010000009701507201818</claveAcceso>
+<codDoc>01</codDoc>
+<estab>001</estab>
+<ptoEmi>001</ptoEmi>
+<secuencial>000000970</secuencial>
+<dirMatriz>Miguel Egas y  Morales Entre Salinas</dirMatriz>
+</infoTributaria>
+<infoFactura>
+<fechaEmision>15/07/2018</fechaEmision>
+<dirEstablecimiento>Ibarra</dirEstablecimiento>
+<obligadoContabilidad>NO</obligadoContabilidad>
+<tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+<razonSocialComprador>CONSUMIDOR FINAL</razonSocialComprador>
+<identificacionComprador>9999999999999</identificacionComprador>
+<direccionComprador>Otavalo</direccionComprador>
+<totalSinImpuestos>3.00</totalSinImpuestos>
+<totalDescuento>0.00</totalDescuento>
+<totalConImpuestos>
+<totalImpuesto>
+<codigo>2</codigo>
+<codigoPorcentaje>0</codigoPorcentaje>
+<baseImponible>3.00</baseImponible>
+<tarifa>0</tarifa>
+<valor>0.00</valor>
+</totalImpuesto>
+</totalConImpuestos>
+<propina>0.00</propina>
+<importeTotal>3.00</importeTotal>
+<moneda>DOLAR</moneda>
+<pagos>
+<pago>
+<formaPago>01</formaPago>
+<total>3.00</total>
+</pago>
+</pagos>
+</infoFactura>
+<detalles>
+<detalle>
+<codigoPrincipal>ARETESP SURT</codigoPrincipal>
+<descripcion>ARETESP SURTIDO </descripcion>
+<cantidad>1</cantidad>
+<precioUnitario>3.00</precioUnitario>
+<descuento>0</descuento>
+<precioTotalSinImpuesto>3.00</precioTotalSinImpuesto>
+<impuestos>
+<impuesto>
+<codigo>2</codigo>
+<codigoPorcentaje>0</codigoPorcentaje>
+<tarifa>0</tarifa>
+<baseImponible>3.00</baseImponible>
+<valor>0.00</valor>
+</impuesto>
+</impuestos>
+</detalle>
+</detalles>
+<infoAdicional>
+<campoAdicional nombre="DIRECCION"> Otavalo</campoAdicional>
+<campoAdicional nombre="TELEFONO"> (099) 999-9999</campoAdicional>
+<campoAdicional nombre="EMAIL"> consumidor_final@gmail.com</campoAdicional>
+</infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature100383">
+<ds:SignedInfo Id="Signature-SignedInfo330481">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID120346" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature100383-SignedProperties686143">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>GReqIbxkVpY8q+yl9csboebFM+s=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate649588">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>6xxI3KE7J9ai3ljk+FoFMb0HnJI=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-385338" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>Sdj0LgDR/TTHy6xU6cVCEWzl9SE=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue186477">
+
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate649588">
+<ds:X509Data>
+<ds:X509Certificate>
+
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+
+</ds:Modulus>
+<ds:Exponent></ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature100383-Object290676"><etsi:QualifyingProperties Target="Signature100383"><etsi:SignedProperties Id="Signature100383-SignedProperties686143"><etsi:SignedSignatureProperties><etsi:SigningTime>2018-07-15T13:24:20-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue></ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=,L=,OU=,O=,C=</ds:X509IssuerName><ds:X509SerialNumber></ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-385338"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object>
+</ds:Signature></factura>
+]]></comprobante><mensajes/>
+</autorizacion>

@@ -1,0 +1,108 @@
+<div class="main-content">	
+	<div class="main-content-inner">
+	    <div class="breadcrumbs" id="breadcrumbs">
+			<script type="text/javascript">
+				try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+			</script>
+
+			<ul class="breadcrumb">
+				<li>
+					<i class="ace-icon fa fa-home home-icon"></i>
+					<a href="#/">Inicio</a>
+				</li>
+
+				<li class="active">Auditoria</li>
+			</ul>
+		</div>
+
+	    <div class="page-content">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<i class="fa fa-edit"></i> Filtrar Auditoria
+						</div>
+
+						<div class="panel-body">
+							<form class="form-horizontal" name="form_auditoria" id="form_auditoria" autocomplete="off">
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="col-sm-10">
+											<!--<div class="col-sm-4 no-padding-right">
+												<label class="control-label bolder">RESPONSABLE</label>
+												<span class="block input-icon">
+													<select name="select_responsable" id="select_responsable" class="select2" data-placeholder="Seleccione un Responsable...">
+														<option value="">&nbsp;</option>
+													</select>
+												</span>
+											</div>-->
+
+											<div class="col-sm-2 no-padding-right">
+												<label class="control-label bolder">FECHA INICIO</label>
+												<div class="input-group">
+													<input type="text" name="fecha_inicio" id="fecha_inicio" class="form-control datepicker" readonly />
+													<span class="input-group-addon">
+														<i class="ace-icon fa fa-calendar"></i>
+													</span>
+												</div>
+											</div>
+
+											<div class="col-sm-2 no-padding-right">
+												<label>FECHA FIN</label>
+												<div class="input-group">
+													<input type="text" name="fecha_fin" id="fecha_fin" class="form-control datepicker" readonly />
+													<span class="input-group-addon">
+														<i class="ace-icon fa fa-calendar"></i>
+													</span>
+												</div>
+											</div>
+
+											<div class="col-sm-1 no-padding-right">
+												<label> </label>
+												<button type="button" name="btn_consultar" id="btn_consultar" class="btn btn-primary btn-sm" style="margin-top: 6px"><i class="ace-icon fa fa-search"></i> CONSULTAR</button>
+											</div>
+										</div>
+									</div>	
+								</div>
+							</form>
+
+							<form class="form-horizontal" name="form_resultados" id="form_resultados" autocomplete="off">
+								<div class="row">
+									<div class="col-sm-12">
+										<h3 class="header smaller lighter blue"></h3>								
+										<div class="clearfix">
+											<div class="pull-right tableTools-container"></div>
+										</div>
+										<div class="table-header">
+											Resultados para "Auditoria"
+										</div>
+
+										<div>
+											<table id="dynamic-table" class="table table-striped table-bordered table-hover">
+												<thead>
+													<tr>
+														<th>RESPONSABLE</th>
+														<th>MÁQUINA</th>
+														<th>ENTIDAD</th>
+														<th>PROCESO</th>
+														<th>CONTENIDO</th>
+														<th>FECHA</th>
+													</tr>
+												</thead>
+												<tbody>
+													
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+
+

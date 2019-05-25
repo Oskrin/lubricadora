@@ -1,0 +1,164 @@
+<div class="main-content">	
+	<div class="main-content-inner">
+	    <div class="breadcrumbs" id="breadcrumbs">
+			<script type="text/javascript">
+				try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+			</script>
+
+			<ul class="breadcrumb">
+				<li>
+					<i class="ace-icon fa fa-home home-icon"></i>
+					<a href="#/">Inicio</a>
+				</li>
+
+				<li class="active">Formulario104A</li>
+			</ul>
+		</div>
+
+	    <div class="page-content">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<i class="fa fa-edit"></i> Registro Formulario104A
+						</div>
+
+						<div class="panel-body">
+							<div class="alert alert-block alert-success">
+
+								<i class="ace-icon fa fa-check green"></i>
+
+								Creación Formulario 104A Mensual Compras - Ventas
+							</div>	
+							<form class="form-horizontal" id="form_104a" name="form_104a">
+								<div class="form-group">
+									<label class="col-xs-12 col-sm-3 control-label no-padding-right">Año</label>
+
+									<div class="col-xs-12 col-sm-4">
+										<select name="select_anio" id="select_anio" class="select2 width-100" data-placeholder="Mes Físcal...">
+											<option value="2018">2018</option>
+											<option value="2017">2017</option>
+											<option value="2016">2016</option>
+											<option value="2015">2015</option>
+											<option value="2014">2014</option>
+											<option value="2013">2013</option>
+											<option value="2012">2012</option>
+											<option value="2011">2011</option>
+											<option value="2010">2010</option>
+											<option value="2009">2009</option>
+											<option value="2008">2008</option>
+											<option value="2007">2007</option>
+											<option value="2006">2006</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-xs-12 col-sm-3 control-label no-padding-right">Mes</label>
+									<div class="col-xs-12 col-sm-4">
+										<select name="select_mes" id="select_mes" class="select2 width-100" data-placeholder="Mes Físcal...">
+											<option value="01">ENERO</option>
+											<option value="02">FEBRERO</option>
+											<option value="03">MARZO</option>
+											<option value="04">ABRIL</option>
+											<option value="05">MAYO</option>
+											<option value="06">JUNIO</option>
+											<option value="07">JULIO</option>
+											<option value="08">AGOSTO</option>
+											<option value="09">SEPTIEMBRE</option>
+											<option value="10">OCTUBRE</option>
+											<option value="11">NOVIEMBRE</option>
+											<option value="12">DICIEMBRE</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="clearfix form-actions center">
+									<div class="col-md-12">
+										<button type="button" name="btn_0" id="btn_0" class="btn btn-primary" data-toggle="tooltip" title="Registrar Formulario">
+											<i class="ace-icon fa fa-save bigger-110"></i>
+											Guardar
+										</button>
+
+										<button type="button" name="btn_1" id="btn_1" class="btn btn-primary" data-toggle="tooltip" title="Total Ventas">
+											<i class="ace-icon fa fa-search bigger-110"></i>
+											Total Ventas
+										</button>
+
+										<button type="button" name="btn_2" id="btn_2" class="btn btn-primary" data-toggle="tooltip" title="Total Compas">
+											<i class="ace-icon fa fa-search bigger-110"></i>
+											Total Compas
+										</button>
+
+										<button type="button" name="btn_3" id="btn_3" class="btn btn-primary" data-toggle="tooltip" title="Formularios 104A">
+											<i class="ace-icon fa fa-search bigger-110"></i>
+											Formularios 104A
+										</button>
+									</div>
+								</div>
+							</form>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModalVentas">
+    <div class="modal-dialog modal-lg">
+      	<div class="modal-content">
+	        <div class="modal-header">
+	          	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	          	<h4 class="modal-title">TOTAL VENTAS</h4>
+	        </div>
+
+	        <div class="modal-body">
+	            <table id="table1"></table>
+				<div id="pager1"></div>
+	        </div>
+	        <div class="modal-footer">
+	          	<button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="tooltip" title="Cerrar ventana">Cerrar</button>
+	        </div>
+      	</div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModalCompras">
+    <div class="modal-dialog modal-lg">
+      	<div class="modal-content">
+	        <div class="modal-header">
+	          	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	          	<h4 class="modal-title">TOTAL COMPRAS</h4>
+	        </div>
+
+	        <div class="modal-body">
+	            <table id="table2"></table>
+				<div id="pager2"></div>
+	        </div>
+	        <div class="modal-footer">
+	          	<button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="tooltip" title="Cerrar ventana">Cerrar</button>
+	        </div>
+      	</div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModalFormulario">
+    <div class="modal-dialog modal-lg">
+      	<div class="modal-content">
+	        <div class="modal-header">
+	          	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	          	<h4 class="modal-title">DESCARGAR FORMULARIOS104A</h4>
+	        </div>
+
+	        <div class="modal-body">
+	            <table id="table3"></table>
+				<div id="pager3"></div>
+	        </div>
+	        <div class="modal-footer">
+	          	<button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="tooltip" title="Cerrar ventana">Cerrar</button>
+	        </div>
+      	</div>
+    </div>
+</div>

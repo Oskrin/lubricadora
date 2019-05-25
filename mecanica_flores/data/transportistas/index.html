@@ -1,0 +1,270 @@
+<div class="main-content">	
+	<div class="main-content-inner">
+	    <div class="breadcrumbs" id="breadcrumbs">
+			<script type="text/javascript">
+				try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+			</script>
+
+			<ul class="breadcrumb">
+				<li>
+					<i class="ace-icon fa fa-home home-icon"></i>
+					<a href="#/">Inicio</a>
+				</li>
+
+				<li class="active">Ingesos</li>
+				<li class="active">Transportistas</li>
+			</ul>
+		</div>
+
+	    <div class="page-content">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<i class="fa fa-edit"></i> Registro Transportistas
+						</div>
+
+						<div class="panel-body">
+							<div class="col-md-12">
+								<div class="col-md-3">
+							    	<div class="widget-box">
+										<div class="widget-body">
+											<div class="widget-main">
+												<img id="logo" name="logo" class="img-responsive" alt="Foto Transportista" style="width: 100%; height: 100%"  />
+											</div>
+										</div>
+									</div>	
+						    	</div>
+
+						    	<div class="col-md-9">
+					    			<ul class="nav nav-tabs padding-12 tab-color-blue background-blue" id="tabTransportista">
+										<li class="active">
+											<a data-toggle="tab" href="#informacion">Información Básica</a>
+										</li>
+										<li>
+											<a data-toggle="tab" href="#cargar">Cargar Transportistas</a>
+										</li>
+									</ul>
+
+									<div class="tab-content">
+										&nbsp;	
+										<div id="informacion" class="tab-pane in active">
+											<form class="form-horizontal" name="form_transportistas" id="form_transportistas" autocomplete="off">
+												<div class="form-group">
+													<label class="control-label col-sm-3 bolder">Tipo Documento:</label>
+													<div class="col-sm-7">
+														<div class="clearfix">
+															<select name="select_documento" id="select_documento" class="select2" data-placeholder="Seleccione tipo documento...">
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="control-label col-sm-3 bolder">Identificación:</label>
+													<div class="col-sm-7">
+														<div class="clearfix">
+															<input type="text" name="identificacion" id="identificacion" class="form-control" placeholder="Identificación"  />
+															<input type="hidden" name="id_transportista" id="id_transportista" class="form-control" />
+														</div>
+													</div>
+													<button type="button" name="btn_verificar" id="btn_verificar" class="btn btn-primary btn-sm" onclick="angular.element(this).scope().cargadatos('estado')"><i class="ace-icon fa fa-search"></i></button>
+												</div>
+
+												<div class="form-group">
+													<label class="control-label col-sm-3 bolder">Razón Social:</label>
+													<div class="col-sm-7">
+														<div class="clearfix">
+															<input type="text" name="razon_social" id="razon_social" class="form-control" placeholder="Razón Social" onkeyup="this.value = this.value.toUpperCase();" />
+														</div>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="control-label col-sm-3 bolder">Nombre Comercial:</label>
+													<div class="col-sm-7">
+														<div class="clearfix">
+															<input type="text" name="nombre_comercial" id="nombre_comercial" class="form-control" placeholder="Nombre Comercial" onkeyup="this.value = this.value.toUpperCase();" />
+														</div>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="control-label col-sm-3 bolder">Teléfono:</label>
+													<div class="col-sm-7">
+														<div class="clearfix">
+															<span class="block input-icon">
+																<input type="text" name="telefono1" id="telefono1" class="form-control" placeholder="Teléfono" />
+																<i class="ace-icon fa fa-phone"></i>
+												            </span>
+														</div>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="control-label col-sm-3 bolder">Celular:</label>
+													<div class="col-sm-7">
+														<div class="clearfix">
+															<span class="block input-icon">
+																<input type="text" name="telefono2" id="telefono2" class="form-control" placeholder="Celular" />
+																<i class="ace-icon fa fa-mobile"></i>
+												            </span>
+														</div>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="control-label col-sm-3 bolder">Ciudad:</label>
+													<div class="col-sm-7">
+														<div class="clearfix">
+															<input type="text" name="ciudad" id="ciudad" class="form-control" placeholder="Ciudad" onkeyup="this.value = this.value.toUpperCase();"/>
+														</div>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="control-label col-sm-3 bolder">Dirección:</label>
+													<div class="col-sm-7">
+														<div class="clearfix">
+															<input type="text" name="direccion" id="direccion" class="form-control" placeholder="Dirección" />
+														</div>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="control-label col-sm-3 bolder">Correo:</label>
+													<div class="col-sm-7">
+														<div class="clearfix">
+															<span class="block input-icon">
+																<input type="text" name="correo" id="correo" class="form-control" placeholder="Correo" />
+																<i class="ace-icon fa fa-envelope"></i>
+												            </span>
+														</div>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="control-label col-sm-3 bolder">Foto:</label>
+												    <div class="col-sm-7">
+												 	   	<input type="file" class="form-control" id="file_1" name="file_1" fileinput="file" onchange='Test.UpdatePreview(this)' accept="image/*" />			    
+												    </div>
+												</div>
+
+												<div class="form-group">
+													<label class="control-label col-sm-3 bolder">Observaciones:</label>
+													<div class="col-sm-7">
+														<div class="clearfix">
+															<textarea name="observaciones" id="observaciones" class="form-control" placeholder="Observaciones"></textarea>
+														</div>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="control-label col-sm-3 bolder">Estado:</label>
+													<div class="col-sm-7">
+														<div class="clearfix">
+															<select name="select_estado" id="select_estado" class="select2" data-placeholder="Seleccione un estado...">
+																<option value="1" selected>Activo</option>
+																<option value="0">Inactivo</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="clearfix form-actions center">
+													<div class="col-md-12">
+														<button type="button" name="btn_0" id="btn_0" class="btn btn-primary" data-toggle="tooltip" title="Registrar Transportista">
+															<i class="ace-icon fa fa-save bigger-110"></i>
+															Guardar
+														</button>
+
+														<button type="button" name="btn_1" id="btn_1" class="btn btn-primary" data-toggle="tooltip" title="Modificar Transportista">
+															<i class="ace-icon fa fa-pencil-square-o bigger-110"></i>
+															Modificar
+														</button>
+
+														<button type="button" name="btn_2" id="btn_2" class="btn btn-primary" data-toggle="tooltip" title="Buscar Transportistas">
+															<i class="ace-icon fa fa-search bigger-110"></i>
+															Transportistas
+														</button>
+
+														<button type="button" name="btn_3" id="btn_3" class="btn btn-primary" data-toggle="tooltip" title="Nuevo">
+															<i class="ace-icon fa fa-file bigger-110"></i>
+															Nuevo
+														</button>
+													</div>
+												</div>
+											</form>
+										</div>
+
+										<div id="cargar" class="tab-pane">
+											<form class="form-horizontal" name="form_cargar" id="form_cargar" autocomplete="off">
+												<div class="row">
+													<div class="col-sm-12">
+														<div class="alert alert-info">
+															<i class="ace-icon fa fa-hand-o-right"></i>
+
+															Descargar Modelo plantilla Excel.
+															<button type="button" class="btn btn-sm btn-primary pull-right" style="margin-top: -7px;" id="btn_descargar">
+
+																<i class="ace-icon fa fa-download bigger-110"></i>
+																Descargar
+															</button>
+														</div>
+
+											            <input type="file" name="archivo_excel" id="archivo_excel" class="file" />
+
+											            &nbsp;
+
+											            <!--<div class="progress" >
+													        <div class="progress-bar progress-bar-striped" style="width: 0%">
+													            <span class="etiqueta"></span>
+													        </div>
+													    </div>
+													    <div id="respuesta"></div>
+
+											            <div class="progress pos-rel" data-percent="0%">
+															<div class="progress-bar" style="width:0%;"></div>
+														</div>-->
+
+											            <div class="clearfix form-actions center">
+															<div class="col-md-12">
+																<button type="button" name="btn_excel" id="btn_excel" class="btn btn-primary" data-toggle="tooltip" title="Cargar Excel">
+																	<i class="ace-icon fa fa-check bigger-110"></i>
+																	Cargar / Guardar
+																</button>
+															</div>
+														</div> 
+													</div>
+												</div>
+											</form>	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModal">
+    <div class="modal-dialog modal-lg">
+      	<div class="modal-content">
+	        <div class="modal-header">
+	          	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	          	<h4 class="modal-title">BUSCAR TRANSPORTISTAS</h4>
+	        </div>
+
+	        <div class="modal-body">
+	            <table id="table"></table>
+				<div id="pager"></div>
+	        </div>
+	        <div class="modal-footer">
+	          	<button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="tooltip" title="Cerrar ventana">Cerrar</button>
+	        </div>
+      	</div>
+    </div>
+</div>

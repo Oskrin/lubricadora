@@ -1,0 +1,347 @@
+<div class="page-content">
+	<div class="page-header">
+	<h4 class="widget-title lighter">
+			<i class="ace-icon fa fa-star orange"></i>
+			PRINCIPAL
+		</h4>
+	</div>
+	<div class="space-6"></div>
+	<div class="space-6"></div>
+	<div class="space-6"></div>
+	<div class="space-6"></div>	
+
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="row">
+				<div class="col-sm-7 infobox-container">
+					<div class="infobox infobox-green">
+						<div class="infobox-icon">
+							<i class="ace-icon fa fa-shopping-cart"></i>
+						</div>
+
+						<div class="infobox-data">
+							<span class="infobox-data-number">${{proformas}}</span>
+							<div class="infobox-content">PROFORMAS</div>
+						</div>
+					</div>
+
+					<div class="infobox infobox-pink">
+						<div class="infobox-icon">
+							<i class="ace-icon fa fa-shopping-cart"></i>
+						</div>
+
+						<div class="infobox-data">
+							<span class="infobox-data-number">${{factura_venta}}</span>
+							<div class="infobox-content">FACTURAS VENTA</div>
+						</div>
+					</div>
+
+					<div class="infobox infobox-orange2">
+						<div class="infobox-icon">
+							<i class="ace-icon fa fa-shopping-cart"></i>
+						</div>
+
+						<div class="infobox-data">
+							<span class="infobox-data-number">${{nota_venta}}</span>
+							<div class="infobox-content">NOTAS VENTA</div>
+						</div>
+					</div>
+
+					<div class="space-6"></div>
+					<div class="space-6"></div>
+					<div class="space-6"></div>
+					<div class="space-6"></div>
+
+					<a href="#/clientes" >
+						<div class="infobox infobox-green infobox-small infobox-dark">
+							<div class="infobox-icon">
+								<i class="ace-icon fa fa-user"></i>
+							</div>
+
+							<div class="infobox-data">
+								<div class="infobox-content">CLIENTES</div>
+							</div>
+						</div>
+					</a>
+
+					<a href="#/productos" >
+						<div class="infobox infobox-orange2 infobox-small infobox-dark">
+							<div class="infobox-icon">
+								<i class="ace-icon fa fa-cube"></i>
+							</div>
+
+							<div class="infobox-data">
+								<div class="infobox-content">ARTICULOS</div>
+							</div>
+						</div>
+					</a>
+
+					<a href="#/proformas" >
+						<div class="infobox infobox-grey infobox-small infobox-dark">
+							<div class="infobox-icon">
+								<i class="ace-icon fa fa-pencil-square-o"></i>
+							</div>
+
+							<div class="infobox-data">
+								<div class="infobox-content">PROFORMAS</div>
+							</div>
+						</div>
+					</a>	
+
+					<a href="#/factura_venta" >
+						<div class="infobox infobox-pink infobox-small infobox-dark">
+							<div class="infobox-icon">
+								<i class="ace-icon fa fa-download"></i>
+							</div>
+
+							<div class="infobox-data">
+								<div class="infobox-content">FACTURAS VENTAS</div>
+							</div>
+						</div>
+					</a>
+
+					<a href="#/nota_venta" >
+						<div class="infobox infobox-blue infobox-small infobox-dark">
+							<div class="infobox-icon">
+								<i class="ace-icon fa fa-download"></i>
+							</div>
+
+							<div class="infobox-data">
+								<div class="infobox-content">NOTAS VENTA</div>
+							</div>
+						</div>
+					</a>	
+				</div>
+
+				<div class="col-sm-5">
+					<div class="widget-box widget-color-blue">
+						<div class="widget-header">
+							<h4 class="widget-title lighter smaller">
+								<i class="ace-icon fa fa-info"></i>
+								Información
+							</h4>
+						</div>
+
+						<div class="widget-body">
+							<div class="widget-main no-padding">
+								<div class="dialogs">
+									<h4 class="widget-title lighter smaller">Usuario:  {{usuario}}</h4>
+									<h4 class="widget-title lighter smaller">Conexión Anterior:  {{conexion}}</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="hr hr32 hr-dotted"></div>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="widget-box widget-color-blue">
+						<div class="widget-header">
+							<h4 class="widget-title lighter smaller">
+								<i class="fa fa-bar-chart "></i>
+								Ventas Mensuales
+							</h4>
+						</div>
+
+						<div class="widget-body">
+							<div class="widget-main">
+								<hc-column-chart title="VENTAS MENSUALES" data="columnData"></hc-column-chart>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6">
+					<div class="widget-box widget-color-blue">
+						<div class="widget-header">
+							<h4 class="widget-title lighter smaller">
+								<i class="fa fa-pie-chart"></i>
+								Productos más Vendidos
+							</h4>
+						</div>
+
+						<div class="widget-body">
+							<div class="widget-main">
+     							<hc-pie-chart title="MAS VENDIDOS" data="pieData"></hc-pie-chart>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="hr hr32 hr-dotted"></div>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="widget-box widget-color-blue">
+						<div class="widget-header">
+							<h4 class="widget-title lighter smaller">
+								<i class="fa fa-exclamation-triangle"></i>
+								Productos Bajo Stock
+							</h4>
+						</div>
+
+						<div class="widget-body">
+							<div class="widget-main">
+								<div class="widget-box transparent">
+									<div class="widget-body">
+										<div class="widget-main no-padding">
+											<table id="minimo" class="table table-bordered table-striped">
+												<thead class="thin-border-bottom">
+													<tr>
+														<th>
+															<i class="ace-icon fa fa-caret-right blue"></i>Código
+														</th>
+
+														<th>
+															<i class="ace-icon fa fa-caret-right blue"></i>Nombre
+														</th>
+
+														<th class="hidden-480">
+															<i class="ace-icon fa fa-caret-right blue"></i>Stcok
+														</th>
+													</tr>
+												</thead>
+
+												<tbody>
+													<tr ng-repeat="response in productos">
+												      	<td>{{response.codigo}}</td>
+												      	<td>{{response.descripcion}}</td>
+												      	<td class="red" align="center">{{response.stock}}</td>
+												    </tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6">
+					<div class="widget-box widget-color-blue">
+						<div class="widget-header">
+							<h4 class="widget-title lighter smaller">
+								<i class="ace-icon fa fa-comment"></i>
+								Conversación
+							</h4>
+						</div>
+
+						<div class="widget-body">
+							<div class="widget-main no-padding">
+								<div class="dialogs scrollbar" id="style-5">
+									<div class="itemdiv dialogdiv" ng-repeat="data in datos">
+										<div class="user">
+											<img ng-src="data/usuarios/fotos/{{data.imagen}}">
+										</div>
+
+										<div class="body">
+											<div class="time">
+												<i class="ace-icon fa fa-clock-o"></i>
+												<span class="green">{{data.fecha}}</span>
+											</div>
+
+											<div class="name">{{data.nombres_completos}}</div>
+											<div class="text">{{data.mensaje}}</div>
+										</div>
+									</div>
+								</div>
+
+								<form class="form-horizontal" name="form_enviar" id="form_enviar">
+									<div class="form-actions">
+										<div class="input-group">
+											<input placeholder="Escribe tu mensaje aquí..." type="text" class="form-control" name="message" id="message" ng-keydown="myFunction($event)" />
+											<span class="input-group-btn">
+												<button class="btn btn-sm btn-info no-radius" type="button" name="btnEnviar" id="btnEnviar" ng-click="enviar_chat(data)">
+													<i class="ace-icon fa fa-share"></i>
+													Enviar
+												</button>
+											</span>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="hr hr32 hr-dotted"></div>
+
+			<div class="row" style="display: none;">
+				<div class="col-sm-6">
+					<div class="widget-box widget-color-blue">
+						<div class="widget-header">
+							<h4 class="widget-title lighter smaller">
+								<i class="fa fa-exclamation-triangle"></i>
+								Disponibilidad Galones
+							</h4>
+						</div>
+
+						<div class="widget-body">
+							<div class="widget-main">
+								<div class="widget-box transparent">
+									<div class="widget-body">
+										<form class="form-inline">
+								            <div class="form-group mb-3">
+								                <label>Buscar:</label>
+								            </div>
+								            <div class="form-group mx-sm-3 mb-2">
+								                <input type="text" class="form-control" ng-model="buscador" placeholder="Filtra tu búsqueda">
+								            </div>
+								        </form>
+
+								        <br />
+        								<br />
+
+										<div class="widget-main no-padding">
+											<table id="minimo" class="table table-bordered table-striped">
+												<thead class="thin-border-bottom">
+													<tr>
+														<th>
+															<i class="ace-icon fa fa-caret-right blue"></i>Código
+														</th>
+
+														<th>
+															<i class="ace-icon fa fa-caret-right blue"></i>Nombre
+														</th>
+
+														<th class="hidden-480">
+															<i class="ace-icon fa fa-caret-right blue"></i>Stcok
+														</th>
+
+														<th class="hidden-480">
+															<i class="ace-icon fa fa-caret-right blue"></i>Galones
+														</th>
+
+														<th>
+															<i class="ace-icon fa fa-caret-right blue"></i>Caracteristicas
+														</th>
+													</tr>
+												</thead>
+
+												<tbody>
+													<tr ng-repeat="data in disponibles |filter:buscador">
+												      	<td>{{data.codigo}}</td>
+												      	<td>{{data.descripcion}}</td>
+												      	<td align="center">{{data.stock}}</td>
+												      	<td align="center">{{data.disponibles}}</td>
+												      	<td>{{data.observaciones}}</td>
+												    </tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+</div>

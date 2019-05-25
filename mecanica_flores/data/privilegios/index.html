@@ -1,0 +1,64 @@
+<div class="main-content">	
+	<div class="main-content-inner">
+	    <div class="breadcrumbs" id="breadcrumbs">
+			<script type="text/javascript">
+				try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+			</script>
+
+			<ul class="breadcrumb">
+				<li>
+					<i class="ace-icon fa fa-home home-icon"></i>
+					<a href="#/">Inicio</a>
+				</li>
+
+				<li class="active">Privilegios</li>
+			</ul>
+		</div>
+
+	    <div class="page-content">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<i class="fa fa-edit"></i> Gestión Permisos
+						</div>
+
+						<div class="panel-body">
+							<form class="form-horizontal" name="form_privilegios" id="form_privilegios" autocomplete="off">
+								<div class="row">
+									&nbsp;
+									<div class="col-sm-12">
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label class="col-sm-4 control-label no-padding-right">Cargos:</label>
+												<div class="col-sm-8">
+													<select name="select_cargo" id="select_cargo" class="select2" data-placeholder="Seleccione un Cargo...">
+													</select>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-sm-4">
+											<div class="form-group">
+												<button type="button" name="btn_guardar" id="btn_guardar" class="btn btn-primary btn-sm"><i class="ace-icon fa fa-check"></i> ASIGNAR</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-12">
+										<h3 class="header smaller lighter blue"></h3>
+										<div class="widget-body">
+											<div class="widget-main padding-8" id="element_tree">
+												<ul id="tree1"></ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	

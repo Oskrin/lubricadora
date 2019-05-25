@@ -1,0 +1,192 @@
+.content-factura {
+    display: block;
+    width: 80%;
+    margin: 3% auto;
+    font-size: .8em;
+    overflow: hidden;
+    position: relative;
+}
+
+.head-left {
+    display: block;
+    width: 50%;
+    float: left;
+}
+
+.logo-fatura {
+    display: block;
+    width: 99%;
+    height: 157px;
+    margin: 0 1% 2% 0;
+    padding: 2%;
+    text-align: center;
+}
+
+.head-right {
+    display: block;
+    width: 50%;
+    float: left;
+}
+
+.datos-right {
+    display: block;
+    float: left;
+    width: 99%;
+    margin: 0 0 1% 1%;
+    padding: 2%;
+    border: 1px solid #ddd;
+}
+
+.borde_redondo {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.titulo {
+    font-weight: 700;
+}
+
+.full {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.letra-big {
+    font-size: 1.1em!important;
+}
+
+.half {
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+.datos-cliente {
+    display: block;
+    float: left;
+    width: 100%;
+    margin: 1% 0;
+    padding: 1%;
+    border: 1px solid #ddd;
+}
+
+.six {
+    display: block;
+    float: left;
+    width: 16.6666%;
+}
+
+.tabla-factura {
+    width: 100%;
+}
+
+.foot-left {
+    display: block;
+    width: 65%;
+    float: left;
+}
+
+.foot-right {
+    display: block;
+    width: 35%;
+    float: left;
+}
+
+.datos-left-foot {
+    display: block;
+    float: left;
+    width: 99%;
+    margin: 0 1% 1% 0;
+    padding: 2%;
+    border: 1px solid #ddd;
+}
+
+#teclado {
+    margin: 10px auto;
+    width: 688px;
+}
+
+#write {
+    margin: 0 0 5px;
+    padding: 5px;
+    width: 671px;
+    font: 1em/1.5 Verdana, Sans-Serif;
+    background: #fff;
+    border: 1px solid #f9f9f9;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+#keyboard {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#keyboard li {
+    float: left;
+    margin: 0 5px 5px 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #f9f9f9;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.capslock,
+.tab,
+.left-shift {
+    clear: left;
+}
+
+#keyboard .tab,
+#keyboard .delete {
+    width: 70px;
+}
+
+#keyboard .capslock {
+    width: 80px;
+}
+
+#keyboard .return {
+    width: 77px;
+}
+
+#keyboard .left-shift {
+    width: 95px;
+}
+
+#keyboard .right-shift {
+    width: 109px;
+}
+
+.lastitem {
+    margin-right: 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+#keyboard .space {
+    clear: left;
+    width: 681px;
+}
+
+.on {
+    display: none;
+}
+
+#keyboard li:hover {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    border-color: #e5e5e5;
+    cursor: pointer;
+}		
+		

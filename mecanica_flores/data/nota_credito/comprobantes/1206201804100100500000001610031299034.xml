@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autorizacion>
+<estado>AUTORIZADO</estado>
+<numeroAutorizacion>1206201804100100500000001610031299034</numeroAutorizacion>
+<fechaAutorizacion>2018-06-12T11:31:48-05:00</fechaAutorizacion>
+<comprobante><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<notaCredito id="comprobante" version="1.0.0">
+<infoTributaria>
+<ambiente>1</ambiente>
+<tipoEmision>1</tipoEmision>
+<razonSocial>MONTESDEOCA LOPEZ CARLA ESTEFANIA</razonSocial>
+<nombreComercial>CONCEPTUAL BUSINESS GROUP / CORPORACION EFE - EME</nombreComercial>
+<ruc>1003129903001</ruc>
+<claveAcceso>1206201804100312990300110010050000000161206201817</claveAcceso>
+<codDoc>04</codDoc>
+<estab>001</estab>
+<ptoEmi>005</ptoEmi>
+<secuencial>000000016</secuencial>
+<dirMatriz>Miguel Egas y  Morales</dirMatriz>
+</infoTributaria>
+<infoNotaCredito>
+<fechaEmision>12/06/2018</fechaEmision>
+<dirEstablecimiento>Ibarra</dirEstablecimiento>
+<tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+<razonSocialComprador>VILLALBA PAEZ YADIRA MARGOTH</razonSocialComprador>
+<identificacionComprador>1002247458001</identificacionComprador>
+<obligadoContabilidad>NO</obligadoContabilidad>
+<codDocModificado>01</codDocModificado>
+<numDocModificado>001-005-000000163</numDocModificado>
+<fechaEmisionDocSustento>06/03/2018</fechaEmisionDocSustento>
+<totalSinImpuestos>107.50</totalSinImpuestos>
+<valorModificacion>115.30</valorModificacion>
+<moneda>DOLAR</moneda>
+<totalConImpuestos>
+<totalImpuesto>
+<codigo>2</codigo>
+<codigoPorcentaje>0</codigoPorcentaje>
+<baseImponible>42.50</baseImponible>
+<valor>0.00</valor>
+</totalImpuesto>
+<totalImpuesto>
+<codigo>2</codigo>
+<codigoPorcentaje>2</codigoPorcentaje>
+<baseImponible>65.00</baseImponible>
+<valor>7.80</valor>
+</totalImpuesto>
+</totalConImpuestos>
+<motivo>Da;iado</motivo>
+</infoNotaCredito>
+<detalles>
+<detalle>
+<codigoInterno>2800-2cat2</codigoInterno>
+<descripcion>VESTIDO PRINCESITA SOFIA   ACCESORIO DE CABELLO</descripcion>
+<cantidad>1.00</cantidad>
+<precioUnitario>22.50</precioUnitario>
+<descuento>0.00</descuento>
+<precioTotalSinImpuesto>22.50</precioTotalSinImpuesto>
+<impuestos>
+<impuesto>
+<codigo>2</codigo>
+<codigoPorcentaje>2</codigoPorcentaje>
+<tarifa>12</tarifa>
+<baseImponible>22.50</baseImponible>
+<valor>2.70</valor>
+</impuesto>
+</impuestos>
+</detalle>
+<detalle>
+<codigoInterno>2800-4cat2</codigoInterno>
+<descripcion>VESTIDO PRINCESITA SOFIA</descripcion>
+<cantidad>1.00</cantidad>
+<precioUnitario>42.50</precioUnitario>
+<descuento>0.00</descuento>
+<precioTotalSinImpuesto>42.50</precioTotalSinImpuesto>
+<impuestos>
+<impuesto>
+<codigo>2</codigo>
+<codigoPorcentaje>2</codigoPorcentaje>
+<tarifa>12</tarifa>
+<baseImponible>42.50</baseImponible>
+<valor>5.10</valor>
+</impuesto>
+</impuestos>
+</detalle>
+<detalle>
+<codigoInterno>2800-6cat2</codigoInterno>
+<descripcion>VESTIDO PRINCESITA SOFIA   ACCESORIO DE DAMA</descripcion>
+<cantidad>1.00</cantidad>
+<precioUnitario>42.50</precioUnitario>
+<descuento>0.00</descuento>
+<precioTotalSinImpuesto>42.50</precioTotalSinImpuesto>
+<impuestos>
+<impuesto>
+<codigo>2</codigo>
+<codigoPorcentaje>0</codigoPorcentaje>
+<tarifa>0</tarifa>
+<baseImponible>42.50</baseImponible>
+<valor>0.00</valor>
+</impuesto>
+</impuestos>
+</detalle>
+</detalles>
+<infoAdicional>
+<campoAdicional nombre="DIRECCION"> QUITO</campoAdicional>
+<campoAdicional nombre="TELEFONO"> (099) 999-9999</campoAdicional>
+<campoAdicional nombre="EMAIL"> oskrs11@hotmail.comm</campoAdicional>
+</infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature481129">
+<ds:SignedInfo Id="Signature-SignedInfo636940">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID633975" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature481129-SignedProperties644013">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>8J4wGwzIJNLBrWLia3lNc44HBU8=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate433966">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>dzjEgzw2hvC4Ra/9lLLMlvp1HHI=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-398323" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>pAhwWdCqkDEcsbBZsWO6tpsVgfk=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue249776">
+G98vh5NO9Fiy0/3b+JzypK4aIajAiX+m2c0VvyA2zHTX96JyhwuNMx1RoJyaYqGH1ccBz9H1KUNm
+v0t21RtWJ2lvIAc5OwVBAjyRZrVJlYBZp5vA9LTyPip61BzgUwHL/94ununLKtN8pzsUE2ky+mj5
+cNOVpaQuv07qLDFp/TgyR9OZEJjSLCd+P5H3fm4OOOBZ/5jhEpikohIm1jIxByUU398E3Za02qbV
+wlZrvg5AIa022hQBbg3Zi5hARIO75NM4nEnt/oL8x6P46qZcnL1D6hUqmes5sNjr9KrBsHGBXf29
+GdY0B9qOsflomhs7q+yhWNReZ5vdZbCrIwa8yw==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate433966">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJEjCCBvqgAwIBAgIEWH5I0DANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTE3MDUxODE2MDU1MloXDTE5MDUxODE2MzU1
+MlowgbkxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzE9MBEGA1UEBRMKMDAwMDIxMTQzNTAoBgNVBAMTIUNBUkxBIEVTVEVGQU5J
+QSBNT05URVNERU9DQSBMT1BFWjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK+CO0+r
+ZQiWJSYBsOtMduH3InHgnzGZWvF8sT93EdO3OCBuBf13pq1F+fBH9AClcBg6NdIZJAdQncDh20t1
+C6uJysVKncQlk5Bj04FWirgdU8TVk+dSUjO0fGnQNo/pWC/ei8EJzR4adQe0aNVhpG8cZaMwruvb
+2Ev0jXCZFT+qnyELT/0i5k2AWS1e7Hj7ZbG3/eLE7oA9AU4pmawCONuWtMTTtsOGjlapk8ZirmPm
+7ha3G4YPNysAqeQoGcyV85hQnWN95M7JP/BRfmvfVfJXjZijHZkI+WvMnc5dA+kT11X3/jwtkwNk
+Je39aBR9BbZ3G5EtqSNp+P+xNYkEkb0CAwEAAaOCBDYwggQyMAsGA1UdDwQEAwIFIDCBkQYIKwYB
+BQUHAQEEgYQwgYEwPgYIKwYBBQUHMAGGMmh0dHA6Ly9vY3NwLmVjaS5iY2UuZWMvZWpiY2EvcHVi
+bGljd2ViL3N0YXR1cy9vY3NwMD8GCCsGAQUFBzABhjNodHRwOi8vb2NzcDEuZWNpLmJjZS5lYy9l
+amJjYS9wdWJsaWN3ZWIvc3RhdHVzL29jc3AwGgYKKwYBBAGCqDsDAQQMEwoxMDAzMTI5OTAzMB8G
+CisGAQQBgqg7AwIEERMPQ0FSTEEgRVNURUZBTklBMBsGCisGAQQBgqg7AwMEDRMLTU9OVEVTREVP
+Q0EwFQYKKwYBBAGCqDsDBAQHEwVMT1BFWjApBgorBgEEAYKoOwMHBBsTGUFWIEpBSU1FIFJJVkFE
+RU5FSVJBIDYxMDAwGQYKKwYBBAGCqDsDCAQLEwkwNjI2MDYwMjcwFgYKKwYBBAGCqDsDCQQIEwZJ
+YmFycmEwFwYKKwYBBAGCqDsDDAQJEwdFQ1VBRE9SMB0GCisGAQQBgqg7AwsEDxMNMTAwMzEyOTkw
+MzAwMTAgBgorBgEEAYKoOwMzBBITEFNPRlRXQVJFLUFSQ0hJVk8wHQYDVR0RBBYwFIESZ2VyZW5j
+aWFAb3llZm0uY29tMIIB3wYDVR0fBIIB1jCCAdIwggHOoIIByqCCAcaGgdVsZGFwOi8vYmNlcWxk
+YXBzdWJwMS5iY2UuZWMvY249Q1JMNDI0LGNuPUFDJTIwQkFOQ08lMjBDRU5UUkFMJTIwREVMJTIw
+RUNVQURPUixsPVFVSVRPLG91PUVOVElEQUQlMjBERSUyMENFUlRJRklDQUNJT04lMjBERSUyMElO
+Rk9STUFDSU9OLUVDSUJDRSxvPUJBTkNPJTIwQ0VOVFJBTCUyMERFTCUyMEVDVUFET1IsYz1FQz9j
+ZXJ0aWZpY2F0ZVJldm9jYXRpb25MaXN0P2Jhc2WGNGh0dHA6Ly93d3cuZWNpLmJjZS5lYy9DUkwv
+ZWNpX2JjZV9lY19jcmxmaWxlY29tYi5jcmykgbUwgbIxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlC
+QU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcwNQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJ
+T04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4wDAYDVQQHEwVRVUlUTzElMCMGA1UEAxMcQUMgQkFO
+Q08gQ0VOVFJBTCBERUwgRUNVQURPUjEPMA0GA1UEAxMGQ1JMNDI0MB8GA1UdIwQYMBaAFBj58Pvm
+MhyZZjkqyouyaX1JJ7/OMB0GA1UdDgQWBBRJfNlGvsI7uGcAeSuHeIawmltbUTAJBgNVHRMEAjAA
+MBkGCSqGSIb2fQdBAAQMMAobBFY4LjEDAgSwMA0GCSqGSIb3DQEBCwUAA4ICAQCiW+VPXoqoVqnX
+jHLfYJNuHeE5Vv0qJMZ40L45EFlSdfIaNQksi9O54JqCVFwtP6DvftEJFfZZrIW1HM/YWindncBw
+pVsEF6Qs6pyoNDF+HDqJYxHnrXfWIlR202iGYqgig9a1oW7rQmlpNzF8SyyACuVYaO/V7H/JAt2t
+sofObWzjprlCZ84rsAVtWoRtdeO2KAsQDdb91N7lKG4oLyMdBZf/Xw52svxut6m9XvYf65hKNRua
+QHaa0geQqqKChbPERhpg+7V6ruPNhabrIZWN9uLv2HV4gPk0LuzvP1v1rTZ7h43yEA6+f5RvOYTb
+qbCEQtjjDbKGhn74yUcJ7a3fAbSvQWx/8WbI83XQXJ7uDufTCNubfY6ar0P+xL2oa2JGWxeGffb0
+KMVCeyIieRGNxcaT5VCiUtq+2pa3N4ONO/uT2XlNZgQCKphtAcIzuakmVrtzkai/i18Twjux/0t+
+KWgwLZrClziFeyb0WgDYCLxYO1giJ4g1WPuL0ErHljDktyMuqfpCKhN+OR2Ki9RESOJufYSv5kZp
+hXbz1ffrIssd9J1Y9ObuFbF6gis4i7U2p/nX2eeVjPihPFzXsxsmxZMiapXLc0oyYc4u9MhlgdGL
+uzUX3rlt4RJzi8CXE0UWcGjXVF79SeFFEZ/eAdDU1niJ3K4+Vs/c4pgLYs7rWg==
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+r4I7T6tlCJYlJgGw60x24fciceCfMZla8XyxP3cR07c4IG4F/XemrUX58Ef0AKVwGDo10hkkB1Cd
+wOHbS3ULq4nKxUqdxCWTkGPTgVaKuB1TxNWT51JSM7R8adA2j+lYL96LwQnNHhp1B7Ro1WGkbxxl
+ozCu69vYS/SNcJkVP6qfIQtP/SLmTYBZLV7sePtlsbf94sTugD0BTimZrAI425a0xNO2w4aOVqmT
+xmKuY+buFrcbhg83KwCp5CgZzJXzmFCdY33kzsk/8FF+a99V8leNmKMdmQj5a8ydzl0D6RPXVff+
+PC2TA2Ql7f1oFH0FtncbkS2pI2n4/7E1iQSRvQ==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature481129-Object769968"><etsi:QualifyingProperties Target="Signature481129"><etsi:SignedProperties Id="Signature481129-SignedProperties644013"><etsi:SignedSignatureProperties><etsi:SigningTime>2018-06-12T11:33:31-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>l1OyBJOm+kwo7bVS8sHXW5SoOi0=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1484671184</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-398323"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object>
+</ds:Signature></notaCredito>
+]]></comprobante><mensajes/>
+</autorizacion>
